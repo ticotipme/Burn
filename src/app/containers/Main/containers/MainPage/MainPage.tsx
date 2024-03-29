@@ -44,7 +44,7 @@ font-size: 32px;
 
 const MainPage: React.FC = () => {
   const initialValues = {
-    amount: "",
+    amount: "", // input field 
   };
 
   const [values, setValues] = React.useState(initialValues);
