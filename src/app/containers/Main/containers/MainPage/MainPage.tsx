@@ -19,7 +19,7 @@ const Flex = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  max-width: 300px;
+  max-width: 200px;
   width: 100%;
 `;
 
@@ -78,13 +78,12 @@ const MainPage: React.FC = () => {
   };
 
   return (
-    <Window title="BURN">
+    <Window title="TICO BURN">
       <Container variant="center">
         <FoundContainer>
           <FoundAmount>
-            Found: {fromGroths(found)}
+            {fromGroths(found)}<FoundText>TICO</FoundText> have been burned
           </FoundAmount>
-          <AssetIcon asset_id={ASSET_ID} big/> <FoundText>TICO</FoundText>
         </FoundContainer>
         <Input
             variant="modalInput"
