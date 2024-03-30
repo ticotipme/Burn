@@ -9,7 +9,7 @@ import * as mainActions from '@app/containers/Main/store/actions';
 import {fromGroths, toGroths} from "@core/appUtils";
 import {selectFound} from "@app/containers/Main/store/selectors";
 import {ASSET_ID} from "@app/shared/config";
-
+import {Asset} from '@app/core/types';
 
 
 const Flex = styled.div`
@@ -34,13 +34,22 @@ const FoundContainer = styled.div`
   margin-bottom: 15px;
 `;
 const FoundAmount = styled.span`
-font-size: 32px;
+  font-size: 32px;
   padding-right: 10px;
-`
+`;
 const FoundText = styled.span`
-font-size: 32px;
+  font-size: 32px;
   padding-left: 20px;
-`
+`;
+const PercentSupplyContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;  
+`;
+const PercentSupplyText = styled.span`
+  font-size: 25px;
+  padding-left: 20px;
+`;
 
 const MainPage: React.FC = () => {
   const initialValues = {
@@ -51,6 +60,7 @@ const MainPage: React.FC = () => {
   const [isButtonDisabled, setIsButtonDisabled] = React.useState(true);
   const [isValid, setIsValid] = React.useState<boolean>(false);
   const [textWidth, setTextWidth] = React.useState(0);
+ 
   useEffect(() => {
     if (Number(values.amount) > 0) {
       setIsButtonDisabled(false);
@@ -69,6 +79,7 @@ const MainPage: React.FC = () => {
 
     return;
   };
+
   const dispatch = useDispatch()
   const found = useSelector(selectFound());
 
@@ -84,7 +95,14 @@ const MainPage: React.FC = () => {
           <FoundAmount>
             {fromGroths(found)}<FoundText>TICO</FoundText> have been burned
           </FoundAmount>
-        </FoundContainer>
+        </FoundContainer> 
+
+       <PercentSupplyContainer>
+        <PercentSupplyText>
+          Equal to _% of the TICO supply
+        </PercentSupplyText>
+       </PercentSupplyContainer>
+
         <Input
             variant="modalInput"
             pallete="purple"
@@ -105,9 +123,7 @@ const MainPage: React.FC = () => {
               disabled={isButtonDisabled}
           >
             <SendIcon/>
-            <Text
-                sx={{fontWeight: "bold", color: "#032E49", marginLeft: "9px"}}
-            >
+            <Text sx={{fontWeight: "bold", color: "#032E49", marginLeft: "9px"}}>
               Burn
             </Text>
           </Button>
