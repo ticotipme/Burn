@@ -95,7 +95,7 @@ const MainPage: React.FC = () => {
           <SocialLinks/>
         <FoundContainer>
           <FoundAmount>
-            {fromGroths(found)}<FoundText>TICO</FoundText> have been burned
+            {fromGroths(found).toLocaleString()}<FoundText>TICO</FoundText> have been burned
           </FoundAmount>
         </FoundContainer> 
 
