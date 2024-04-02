@@ -96,7 +96,7 @@ const MainPage: React.FC = () => {
     
         <FoundContainer>
           <FoundAmount>
-            {fromGroths(found)}<FoundText>TICO</FoundText> have been burned
+            {fromGroths(found).toLocaleString()}<FoundText>TICO</FoundText> have been burned
           </FoundAmount>
         </FoundContainer> 
 
