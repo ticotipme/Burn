@@ -16,7 +16,7 @@ export function isAmountValid(value) {
         return;
     }
 
-    if (splits[0].length > 8 && splits[0][splits[0].length - 1] != '.') {
+    if (splits[0].length > 10 && splits[0][splits[0].length - 1] != '.') {
         return;
     }
 
