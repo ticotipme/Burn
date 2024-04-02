@@ -10,6 +10,7 @@ import {fromGroths, toGroths} from "@core/appUtils";
 import {selectFound} from "@app/containers/Main/store/selectors";
 import {ASSET_ID} from "@app/shared/config";
 import {Asset} from '@app/core/types';
+import {SocialLinks} from "@app/shared/components/SocialLinks";
 
 
 const Flex = styled.div`
@@ -91,6 +92,7 @@ const MainPage: React.FC = () => {
   return (
     <Window title="TICO BURN">
       <Container variant="center">
+          <SocialLinks/>
         <FoundContainer>
           <FoundAmount>
             {fromGroths(found)}<FoundText>TICO</FoundText> have been burned
