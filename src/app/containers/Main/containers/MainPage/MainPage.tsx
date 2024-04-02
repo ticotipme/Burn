@@ -9,7 +9,6 @@ import * as mainActions from '@app/containers/Main/store/actions';
 import {fromGroths, toGroths} from "@core/appUtils";
 import {selectFound} from "@app/containers/Main/store/selectors";
 import {ASSET_ID} from "@app/shared/config";
-import {Asset} from '@app/core/types';
 import {SocialLinks} from "@app/shared/components/SocialLinks";
 
 

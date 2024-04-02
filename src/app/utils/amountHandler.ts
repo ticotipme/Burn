@@ -1,14 +1,14 @@
-import {isFloat, isNumeric} from "@core/appUtils";
+import { isFloat, isNumeric } from "@core/appUtils";
 
 export function isAmountValid(value) {
     const dotRegexp = new RegExp(/\./g);
     const splits = value.toString().split('.');
 
-    if ((value[0] == '0' && (!!value[1] && !['.'].includes(value[1])))) {
+    if ((value[0] === '0' && (!!value[1] && !['.'].includes(value[1])))) {
         return;
     }
 
-    if(((value.match(dotRegexp) || []).length > 1)) {
+    if (((value.match(dotRegexp) || []).length > 1)) {
         return;
     }
 
@@ -16,11 +16,7 @@ export function isAmountValid(value) {
         return;
     }
 
-    if (splits[0].length > 10 && splits[0][splits[0].length - 1] != '.') {
-        return;
-    }
-
-    if (dotRegexp.test(value) && splits[1].length > 2) {
+    if (dotRegexp.test(value) && splits[1].length > 8) {
         return;
     }
 
@@ -35,4 +31,4 @@ export const keyPressAmountHandler = (e) => {
     if (!/[0-9\b\.]/g.test(e.key)) {
         e.preventDefault();
     }
-}
+};
