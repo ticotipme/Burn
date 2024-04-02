@@ -91,8 +91,9 @@ const MainPage: React.FC = () => {
 
   return (
     <Window title="TICO BURN">
+      <SocialLinks/>
       <Container variant="center">
-          <SocialLinks/>
+    
         <FoundContainer>
           <FoundAmount>
             {fromGroths(found)}<FoundText>TICO</FoundText> have been burned
