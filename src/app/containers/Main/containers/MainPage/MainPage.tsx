@@ -10,6 +10,7 @@ import {fromGroths, toGroths} from "@core/appUtils";
 import {selectFound} from "@app/containers/Main/store/selectors";
 import {ASSET_ID} from "@app/shared/config";
 import {SocialLinks} from "@app/shared/components/SocialLinks";
+import { TICO_SUPPLY } from "@app/shared/constants";
 
 
 const Flex = styled.div`
@@ -99,8 +100,8 @@ const MainPage: React.FC = () => {
   };
 
 
-    const str_burned = (fromGroths(found) / 100_100_000_000 * 100).toFixed(2).toString();
-    const int_burned = (fromGroths(found) / 100_100_000_000 * 100)
+    const str_burned = (fromGroths(found) / TICO_SUPPLY * 100).toFixed(2).toString();
+    const int_burned = (fromGroths(found) / TICO_SUPPLY * 100)
 
   return (
     <Window title="TICO BURN">
