@@ -14,6 +14,7 @@ interface WindowProps {
 
 const Container = styled.div<{ bgColor: string }>`
   background-color: ${({ bgColor }) => (Utils.isWeb() || Utils.isMobile() ? bgColor : 'transparent')};
+  font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
   min-height: 100%;
   display: flex;
   flex-direction: column;

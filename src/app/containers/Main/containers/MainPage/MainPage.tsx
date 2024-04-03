@@ -24,6 +24,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Text = styled.span`
+  font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
   margin-left: 10px;
   margin-top: 1px;
 `;
@@ -34,6 +35,7 @@ const FoundContainer = styled.div`
   margin-bottom: 15px;
 `;
 const FoundAmount = styled.span`
+  font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
   font-size: 32px;
   padding-right: 10px;
 `;
@@ -44,9 +46,10 @@ const FoundText = styled.span`
 const PercentSupplyContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;  
+  margin-bottom: 40px;  
 `;
 const PercentSupplyText = styled.span`
+  font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
   font-size: 25px;
   padding-left: 20px;
 `;
