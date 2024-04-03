@@ -57,7 +57,7 @@ const InputGrayStyled = styled(InputStyled)`
 `;
 
 const InputProposalStyled = styled(InputGrayStyled)<{ pallete: string }>`
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
@@ -77,6 +77,7 @@ const InputProposalStyled = styled(InputGrayStyled)<{ pallete: string }>`
 
 const InputMainStyled = styled(InputGrayStyled)<{ pallete: string }>`
   font-size: 16px;
+  font-family: 'ProximaNova';
   font-weight: normal;
   color: ${({ pallete,valid }) => valid ? `var(--color-${pallete})` : 'rgba(255, 98, 92, 1)'};
   height: 45px;
@@ -93,7 +94,7 @@ const InputMainStyled = styled(InputGrayStyled)<{ pallete: string }>`
 const LabelStyled = styled.div<InputProps>`
   text-align: start;
   margin-bottom: 10px;
-  font-family: 'SFProDisplay';
+  font-family: 'ProximaNova';
   font-size: 14px;
   color: 'rgba(255, 255, 255, .6)';
 `;
@@ -102,7 +103,7 @@ const InfoStyled = styled.div<InputProps>`
   text-align: start;
   margin-top: 6px;
   margin-left: 15px;
-  font-family: 'SFProDisplay';
+  font-family: 'ProximaNova';
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
 `
@@ -111,7 +112,7 @@ const ErrorStyled = styled.div<InputProps>`
   text-align: start;
   margin-top: 6px;
   margin-left: 15px;
-  font-family: 'SFProDisplay';
+  font-family: 'ProximaNova';
   font-size: 14px;
   height: 16px;
   color: ${({ pallete,valid }) => valid ? `var(--color-${pallete})` : 'rgba(255, 98, 92, 1)'};

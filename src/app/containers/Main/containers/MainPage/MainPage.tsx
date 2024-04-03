@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { styled } from "@linaria/react";
-import { AssetIcon, Button, Input, Window } from "@app/shared/components";
+import { AssetIcon, Button, Input, Window, ProgressBar } from "@app/shared/components";
 import { amountHandler, keyPressAmountHandler } from "@app/utils/amountHandler";
 import Container from "@app/shared/components/Container";
 import {DappIcon1, SendIcon} from "@app/assets/icons";
@@ -46,13 +46,20 @@ const FoundText = styled.span`
 const PercentSupplyContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;  
+  margin-bottom: 10px;  
 `;
 const PercentSupplyText = styled.span`
   font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
   font-size: 25px;
   padding-left: 20px;
 `;
+const SupplyBurnedProgressBarContainer = styled.div`
+ display: flex;
+ justify-content: center;
+ margin-bottom: 40px;
+`;
+
+
 
 const MainPage: React.FC = () => {
   const initialValues = {
@@ -91,6 +98,10 @@ const MainPage: React.FC = () => {
     dispatch(mainActions.toBurn.request(toGroths(Number(amount)).toString()));
   };
 
+
+    const str_burned = (fromGroths(found) / 100_100_000_000 * 100).toFixed(2).toString();
+    const int_burned = (fromGroths(found) / 100_100_000_000 * 100)
+
   return (
     <Window title="TICO BURN">
       <SocialLinks/>
@@ -104,9 +115,16 @@ const MainPage: React.FC = () => {
 
        <PercentSupplyContainer>
         <PercentSupplyText>
-          Equal to _% of the TICO supply
+          Equal to {str_burned}% of the TICO supply
         </PercentSupplyText>
-       </PercentSupplyContainer>
+      </PercentSupplyContainer>
+
+      <SupplyBurnedProgressBarContainer>
+        <ProgressBar 
+          active={true} 
+          percent={int_burned}> 
+        </ProgressBar>
+      </SupplyBurnedProgressBarContainer>
 
         <Input
             variant="modalInput"

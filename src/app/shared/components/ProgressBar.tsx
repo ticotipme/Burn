@@ -6,7 +6,7 @@ const ContainerStyled = styled.div`
   position: relative;
   width: 256px;
   height: 4px;
-  margin: 0 auto;
+  
   border-radius: 2px;
 
   &:before {
