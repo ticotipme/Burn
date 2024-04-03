@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 import Utils from '@core/utils.js';
 import { useNavigate } from 'react-router-dom';
 import Title from '@app/shared/components/Title';
+import {DappIcon1} from "@app/assets/icons";
 
 interface WindowProps {
   title?: string;
@@ -59,6 +60,7 @@ const Window: React.FC<WindowProps> = ({
   return (
       <>
         <Container bgColor={Utils.getStyles().background_main} ref={rootRef}>
+            <DappIcon1 />
           <HeaderWrapper>
             {title && <Title variant="heading">{title}</Title>}
           </HeaderWrapper>

@@ -3,7 +3,7 @@ import { styled } from "@linaria/react";
 import { AssetIcon, Button, Input, Window } from "@app/shared/components";
 import { amountHandler, keyPressAmountHandler } from "@app/utils/amountHandler";
 import Container from "@app/shared/components/Container";
-import {SendIcon} from "@app/assets/icons";
+import {DappIcon1, SendIcon} from "@app/assets/icons";
 import {useDispatch, useSelector} from "react-redux";
 import * as mainActions from '@app/containers/Main/store/actions';
 import {fromGroths, toGroths} from "@core/appUtils";
@@ -92,7 +92,7 @@ const MainPage: React.FC = () => {
     <Window title="TICO BURN">
       <SocialLinks/>
       <Container variant="center">
-    
+
         <FoundContainer>
           <FoundAmount>
             {fromGroths(found).toLocaleString()}<FoundText>TICO</FoundText> have been burned

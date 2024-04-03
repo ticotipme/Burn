@@ -12,7 +12,6 @@ const ContainerStyled = styled.div<ContainerProps>`
   //align-items: center;
   margin: 30px 0;
   width: 100%;
-  min-height: 600px;
   height: 100%;
   align-items: ${({ variant }) => variant};
   justify-content: ${({ jystify }) => jystify};

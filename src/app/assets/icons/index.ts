@@ -4,6 +4,8 @@ import SendIcon from  './send.svg'
 import TelegramIcon from './telegramIcon.svg'
 import DiscordIcon from './discordIcon.svg'
 import WebIcon from './webIcon.svg'
+import DappIcon1 from './DApp-icon_1.svg'
+import DappIcon2 from './DApp-icon_2.svg'
 
 
 export {
@@ -12,5 +14,7 @@ export {
   AssetIconBig,
   TelegramIcon,
   DiscordIcon,
-  WebIcon
+  WebIcon,
+  DappIcon1,
+  DappIcon2
 }
