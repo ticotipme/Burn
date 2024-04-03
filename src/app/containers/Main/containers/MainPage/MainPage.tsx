@@ -55,9 +55,9 @@ const PercentSupplyText = styled.span`
   padding-left: 20px;
 `;
 const SupplyBurnedProgressBarContainer = styled.div`
- display: flex;
- justify-content: center;
- margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 `;
 
 
@@ -110,10 +110,10 @@ const MainPage: React.FC = () => {
 
         <FoundContainer>
           <FoundAmount>
-            {fromGroths(found).toLocaleString()}<FoundText>TICO</FoundText> have been burned
+            {fromGroths(found).toLocaleString()}<FoundText>TICO have been burned</FoundText>
           </FoundAmount>
         </FoundContainer> 
-
+        
        <PercentSupplyContainer>
         <PercentSupplyText>
           Equal to {str_burned}% of the TICO supply
@@ -145,6 +145,7 @@ const MainPage: React.FC = () => {
           <Button
               onClick={() => toBurn(values.amount)}
               disabled={isButtonDisabled}
+              pallete="purple"
           >
             <SendIcon/>
             <Text sx={{fontWeight: "bold", color: "#032E49", marginLeft: "9px"}}>
