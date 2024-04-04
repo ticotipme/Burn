@@ -97,6 +97,11 @@ const MainPage: React.FC = () => {
 
   const toBurn = ( amount: string) => {
     dispatch(mainActions.toBurn.request(toGroths(Number(amount)).toString()));
+        setValues({
+          ...values,
+          [amount]: 0
+        })
+
   };
 
 
@@ -105,7 +110,6 @@ const MainPage: React.FC = () => {
 
   return (
     <Window title="TICO BURN">
-      <SocialLinks/>
       <Container variant="center">
 
         <FoundContainer>

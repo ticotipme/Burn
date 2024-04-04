@@ -76,6 +76,7 @@ function* sharedSaga() {
           break;
 
         case 'ev_txs_changed':
+          store.dispatch(mainActions.viewFound.request(null));
           // store.dispatch(setTxStatus(payload.result));
           break;
         default:

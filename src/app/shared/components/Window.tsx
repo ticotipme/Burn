@@ -4,6 +4,7 @@ import Utils from '@core/utils.js';
 import { useNavigate } from 'react-router-dom';
 import Title from '@app/shared/components/Title';
 import {DappIcon1} from "@app/assets/icons";
+import {SocialLinks} from "@app/shared/components/SocialLinks";
 
 interface WindowProps {
   title?: string;
@@ -56,11 +57,13 @@ const Window: React.FC<WindowProps> = ({
                                          children, title, backButton, createPool,headless
                                        }) => {
   const rootRef = useRef();
-  const navigate = useNavigate();
 
   return (
       <>
         <Container bgColor={Utils.getStyles().background_main} ref={rootRef}>
+            <HeaderWrapper>
+                <SocialLinks/>
+            </HeaderWrapper>
             <DappIcon1 />
           <HeaderWrapper>
             {title && <Title variant="heading">{title}</Title>}
