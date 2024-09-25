@@ -51,8 +51,10 @@ const PercentSupplyContainer = styled.div`
 `;
 const PercentSupplyText = styled.span`
   font-family: 'ProximaNova', 'SFProDisplay', sans-serif;
-  font-size: 25px;
+  font-size: 15px;
   padding-left: 20px;
+  font-style: italic;
+  color: grey;
 `;
 const SupplyBurnedProgressBarContainer = styled.div`
   display: flex;
