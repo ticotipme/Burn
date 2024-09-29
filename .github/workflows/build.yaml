@@ -1,0 +1,21 @@
+name: Build and Package .dapp
+
+on:
+  push:
+    branches:
+      - master
+      - 26-add-build-workflow
+  pull_request:
+    branches:
+      - master
+      - 26-add-build-workflow
+
+jobs:
+  build:
+    uses: ticotipme/Burn/.github/workflows/make-dapp.yaml@26-add-build-workflow
+    with:
+      manifest_name: 'Tico Burn'
+      manifest_description: 'much burn less TICO'
+      manifest_version_prefix: "1.0"
+      manifest_guid: '98c591cfdbed4c75aac2b53288ce770c'
+      dapp_name: 'tico-burn'
