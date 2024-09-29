@@ -1,4 +1,4 @@
-const MAINNET = false
+const MAINNET = true
 const production = MAINNET
 
 
