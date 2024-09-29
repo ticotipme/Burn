@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    uses: BeamMW/dao-voting-app/.github/workflows/make-dapp.yaml@workflow-test
+    uses: ticotipme/Burn/.github/workflows/make-dapp.yaml@26-add-build-workflow
     with:
       manifest_name: 'Tico Burn'
       manifest_description: 'much burn less TICO'
