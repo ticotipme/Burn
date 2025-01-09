@@ -10,7 +10,7 @@ import {fromGroths, toGroths} from "@core/appUtils";
 import {selectFound} from "@app/containers/Main/store/selectors";
 import {ASSET_ID} from "@app/shared/config";
 import {SocialLinks} from "@app/shared/components/SocialLinks";
-import { TICO_SUPPLY } from "@app/shared/constants";
+import { DOGGY_SUPPLY } from "@app/shared/constants";
 
 
 const Flex = styled.div`
@@ -107,22 +107,22 @@ const MainPage: React.FC = () => {
   };
 
 
-    const str_burned = (fromGroths(found) / TICO_SUPPLY * 100).toFixed(2).toString();
-    const int_burned = (fromGroths(found) / TICO_SUPPLY * 100)
+    const str_burned = (fromGroths(found) / DOGGY_SUPPLY * 100).toFixed(2).toString();
+    const int_burned = (fromGroths(found) / DOGGY_SUPPLY * 100)
 
   return (
-    <Window title="TICO BURN">
+    <Window title="doggy BURN">
       <Container variant="center">
 
         <FoundContainer>
           <FoundAmount>
-            {fromGroths(found).toLocaleString()}<FoundText>TICO have been burned</FoundText>
+            {fromGroths(found).toLocaleString()}<FoundText>doggy have been burned</FoundText>
           </FoundAmount>
         </FoundContainer> 
         
        <PercentSupplyContainer>
         <PercentSupplyText>
-          Equal to {str_burned}% of the TICO supply
+          Equal to {str_burned}% of the doggy supply
         </PercentSupplyText>
       </PercentSupplyContainer>
 
@@ -144,7 +144,7 @@ const MainPage: React.FC = () => {
             type="text"
         >
           <Flex>
-            <AssetIcon asset_id={ASSET_ID}/> <Text>TICO</Text>
+            <AssetIcon asset_id={ASSET_ID}/> <Text>doggy</Text>
           </Flex>
         </Input>
         <ButtonContainer>
